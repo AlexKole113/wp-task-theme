@@ -1,0 +1,144 @@
+.hero {
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 6rem;
+    background-position: 100% 95%;
+    @mixin lg {
+        padding-top: 1.4rem;
+    }
+    @mixin xxl {
+        padding-bottom: 0;
+    }
+
+    &-group {
+       display: flex;
+       flex-flow: column;
+        @mixin lg {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+            grid-gap: 2rem;
+        }
+    }
+    &-text {
+        --margin-bottom: 3rem;
+        hyphens: auto;
+        word-wrap: break-word;
+        @mixin lg {
+            padding-top: 2.7rem;
+            text-align: left;
+        }
+        &__subtitle {
+            color: var(--black-blue);
+            font-weight: 600;
+            margin-bottom: calc(var(--margin-bottom) / 6);
+            font-size: 1rem;
+            @mixin xl {
+                margin-bottom: 0;
+                font-size: 1.56rem;
+            }
+        }
+        &__title {
+            color: var(--blue-light);
+            font-weight: 600;
+            margin-bottom: var(--margin-bottom);
+            font-size: 1.8rem;
+            @mixin xl {
+                font-size: 2.7rem;
+                line-height: .75;
+                margin-bottom: 1.5rem;
+            }
+        }
+        &__content {
+            color:var(--gray-blue);
+            margin-bottom: var(--margin-bottom);
+            font-weight: 500;
+            font-size: 1rem;
+            @mixin xl {
+                font-size: 1.11rem;
+                padding-right: 6rem;
+                margin-bottom: 1.8rem;
+            }
+        }
+
+    }
+    &-features-list {
+        list-style: none;
+        display: flex;
+        flex-flow: column;
+        &__item {
+            font-weight: 600;
+            color: var(--gray-blue);
+            position: relative;
+            width: max-content;
+            margin-right: auto;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            max-width: 100%;
+            word-wrap: break-word;
+            @mixin lg {
+                padding-left: 1.5rem;
+                font-size: 1.11rem;
+                margin-bottom: 0.8rem;
+            }
+            svg {
+                position: absolute;
+                width: 1rem;
+                height: 1rem;
+                left:0;
+                top: .33rem;
+                @mixin lg {
+                    left:1px;
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+        }
+    }
+    &-picture {
+        order: -1;
+        margin: 2.5rem 0;
+        @mixin lg {
+            order: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        picture {
+            display: flex;
+            width: 100%;
+            min-height: 20rem;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                @mixin md {
+                    width: 101%;
+                }
+            }
+        }
+
+    }
+    &-buttons {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: var(--margin-bottom);
+        @mixin lg {
+            flex-flow: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin-top: 2rem;
+        }
+        .theme-button {
+            margin-bottom: 1rem;
+            @mixin lg {
+                &:not(:first-child){
+                    margin-left: 0.6rem;
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,74 @@
+.wp-admin {
+  .single-input-group {
+    position: relative;
+
+    .fields-data-set {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr ;
+      grid-gap: 10px;
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #00000026;
+
+      &__item {
+        min-width: 0;
+        &_input {
+          max-width: 100%;
+          min-width: 0;
+        }
+        &_label {
+          font-size: 13px;
+        }
+        &-show-on-front {
+          grid-column: 1/4;
+          grid-row: 2/3;
+          min-height: 86px;
+        }
+
+
+      }
+    }
+
+    &__delete-field {
+      position: absolute;
+      right: -20px;
+      bottom: 50%;
+
+      svg {
+        width: 16px;
+        height: auto;
+        color: tomato;
+        fill: tomato;
+      }
+    }
+  }
+  .editor-testimonials-fields-add-button {
+    &__container {
+      margin: 16px 0;
+    }
+
+    &__link {
+
+    }
+
+  }
+
+
+  .testimonials .testimonials-collection {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .editor-testimonials-options {
+    &__item {
+      &_label {
+        display: block;
+      }
+
+    }
+  }
+}

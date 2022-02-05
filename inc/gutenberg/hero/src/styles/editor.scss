@@ -1,0 +1,131 @@
+.wp-admin {
+  .hero {
+    &-text {
+      &__title {
+        margin-top: 0;
+      }
+    }
+    &-features-list {
+      padding: 0;
+      &__item {
+        display: flex;
+      }
+    }
+    &-buttons {
+      align-items: flex-start;
+      .theme-button {
+        &.success {
+          padding: 0.63rem 1.2rem;
+        }
+        &.success-white {
+          padding: 0.7rem 2.1rem;
+        }
+      }
+    }
+  }
+  .editor {
+    &-button-with-menu {
+      position: relative;
+      margin-bottom: 1rem;
+      .button-menu {
+        display: none;
+        position: absolute;
+        top:100%;
+        left: 0;
+        background-color: #FFFFFF;
+        padding: 15px;
+        box-shadow: 0px 0px 11px #a5a5a5ab;
+        font-size: 12px;
+        z-index: 15;
+      }
+      &:hover {
+        .button-menu {
+          display: flex;
+          flex-flow: column;
+        }
+      }
+      .title-menu {
+        display: block;
+        font-weight: 600;
+        margin: 0 0 5px;
+      }
+      .button-options-section {
+         padding-bottom: .5rem;
+         margin-bottom: .5rem;
+         border-bottom: 1px solid #80808038;
+        svg {
+          color: tomato;
+          fill: tomato;
+          width: 16px;
+          height: auto;
+        }
+        a {
+          color: tomato;
+          span {
+            display: inline-block;
+            margin-right: 10px;
+          }
+        }
+      }
+      .button-url-section {
+        padding-bottom: .5rem;
+        margin-bottom: .5rem;
+        border-bottom: 1px solid #80808038;
+        label {
+          display: flex;
+          flex-flow: column;
+        }
+      }
+      .button-type-section {
+        padding-bottom: .5rem;
+        margin-bottom: .5rem;
+        display: flex;
+        flex-flow: column;
+        a {
+          display: inline-block;
+          margin-bottom: 5px;
+        }
+        .active-button-type {
+            background-color: #4B6CCC;
+          color: #FFFFFF;
+        }
+      }
+      &:not(:first-child){
+        margin-left: 0.8rem;
+      }
+    }
+    &-hero-add-button {
+      background-color: #FFFFFF;
+      display: inline-block;
+      padding: 5px 10px;
+      box-shadow: 1px 1px 7px 1px #007cba42;
+    }
+    &-features {
+      &-delete-item {
+        svg {
+          width: 16px;
+          color: tomato;
+          fill: tomato;
+          position: static;
+          margin-left: 10px;
+          transition: transform .4s;
+        }
+
+        &:hover,
+        &:focus {
+          svg {
+            transform: scale(1.2);
+          }
+        }
+
+      }
+    }
+
+
+
+  }
+
+}
+
+
+

@@ -1,0 +1,19 @@
+.wp-admin .second-section-picture {
+  position: relative; }
+  .wp-admin .second-section-picture .change-picture-order {
+    position: absolute;
+    top: 0;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: #df1d1d;
+    padding: 5px 10px;
+    color: #FFFFFF; }
+  .wp-admin .second-section-picture.L-order .change-picture-order {
+    right: 0;
+    left: unset; }
+  .wp-admin .second-section-picture.R-order .change-picture-order {
+    right: unset;
+    left: 0; }
+
+
+/*# sourceMappingURL=index.css.map*/

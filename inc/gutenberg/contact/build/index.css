@@ -1,0 +1,35 @@
+.editor .contact__map {
+  position: relative; }
+  .editor .contact__map:before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: 1.7rem;
+    bottom: 0;
+    left: 0;
+    background-image: url(https://motovoyager.net/wp-content/uploads/2021/03/google-maps-nowe-funkcje-mapy-google.jpg);
+    opacity: .3; }
+
+.editor-google-data {
+  position: relative;
+  z-index: 2;
+  box-shadow: 1px 1px 1px gray;
+  display: flex;
+  flex-flow: column;
+  width: 44%;
+  background-color: #FFFFFF;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px; }
+  .editor-google-data.wpcf7-form {
+    width: 100%;
+    margin: 0; }
+  .editor-google-data__control-group span {
+    display: block;
+    font-size: 16px; }
+  .editor-google-data__control-group input {
+    display: block;
+    width: 100%; }
+
+
+/*# sourceMappingURL=index.css.map*/

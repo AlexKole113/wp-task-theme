@@ -1,0 +1,53 @@
+.wp-admin .single-input-group {
+  position: relative; }
+  .wp-admin .single-input-group .fields-data-set {
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #00000026; }
+    .wp-admin .single-input-group .fields-data-set__item {
+      min-width: 0; }
+      .wp-admin .single-input-group .fields-data-set__item_input {
+        max-width: 100%;
+        min-width: 0; }
+      .wp-admin .single-input-group .fields-data-set__item_label {
+        font-size: 13px; }
+      .wp-admin .single-input-group .fields-data-set__item-show-on-front {
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 3;
+        grid-column: 1/4;
+        -ms-grid-row: 2;
+        -ms-grid-row-span: 1;
+        grid-row: 2/3;
+        min-height: 86px; }
+  .wp-admin .single-input-group__delete-field {
+    position: absolute;
+    right: -20px;
+    bottom: 50%; }
+    .wp-admin .single-input-group__delete-field svg {
+      width: 16px;
+      height: auto;
+      color: tomato;
+      fill: tomato; }
+
+.wp-admin .editor-testimonials-fields-add-button__container {
+  margin: 16px 0; }
+
+.wp-admin .testimonials .testimonials-collection {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.wp-admin .editor-testimonials-options__item_label {
+  display: block; }
+
+
+/*# sourceMappingURL=index.css.map*/

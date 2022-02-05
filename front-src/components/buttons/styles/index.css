@@ -1,0 +1,102 @@
+.theme-button {
+    --main-color: var(--white-pure);
+    border-radius: 5px;
+    display: inline-block;
+    width: max-content;
+    cursor: pointer;
+    font-size: 1.25rem;
+    transition: transform .6s;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--main-color);
+    text-decoration: none;
+    &:before {
+        content: ' ';
+        background: var(--main-color);
+        position: absolute;
+        padding: 0.85em 0.75em;
+        display: block;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        transition: all 0.3s ease;
+        transform: scale(0, 0) rotate(-180deg);
+    }
+    span, svg {
+        position: relative;
+        z-index: 1;
+    }
+    &:hover,
+    &:focus {
+        span {
+            transition: all 0.1s .2s ease-out;
+            color: var(--white-pure);
+        }
+        svg, path {
+            transition: all 0.1s .2s ease-out;
+            fill: var(--white-pure);
+        }
+        &:before {
+            transform: scale(1, 1) rotate(0deg);
+            transition: all 0.3s ease-out;
+        }
+    }
+    &.success-white {
+        --main-color: var(--green-light);
+        color: var(--main-color);
+        background-color: transparent;
+        padding: .7rem 2.1rem;
+        @mixin lg  {
+            font-size: .92rem;
+            font-weight: 700;
+            letter-spacing: .2px;
+            padding: 0.55rem 1.6rem;
+        }
+    }
+    &.success {
+        --main-color: var(--green-light);
+        color: var(--white-pure);
+        background-color: var(--main-color);
+        padding: .7rem 2.1rem;
+        &:before {
+            background-color: var(--white-pure);
+        }
+        @mixin lg  {
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 0.6rem 1.2rem;
+        }
+        &:hover,
+        &:focus {
+            span {
+                color: var(--main-color);
+            }
+        }
+    }
+    &.hero-video {
+        --main-color: var(--blue-light);
+        color: var(--main-color);
+        background-color: transparent;
+        padding: 0.6rem 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+            margin-right: 1rem;
+            @mixin lg  {
+                margin-right: 1.09rem;
+            }
+        }
+        @mixin lg  {
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 0.55rem 1.1rem;
+        }
+    }
+    &.button-big {
+       display: block;
+        min-width: 280px;
+        text-align: center;
+    }
+}
