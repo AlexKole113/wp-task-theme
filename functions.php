@@ -120,7 +120,10 @@ add_action( 'after_setup_theme', 'task_theme_content_width', 0 );
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
+
+
 function task_theme_widgets_init() {
+
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Header Logo Text', 'task-theme' ),
@@ -167,27 +170,19 @@ function task_theme_widgets_init() {
         )
     );
 }
-add_action( 'widgets_init', 'task_theme_require_plugins' );
-
+add_action( 'widgets_init', 'task_theme_widgets_init' );
 
 require_once dirname( __FILE__ ) . '/inc/class-tgm-plugin-activation.php';
 function task_theme_require_plugins() {
-
     $plugins = [
-        'name'               => 'Contact Form 7',
-        'slug'               => 'contact-form-7',
-        'source'             => 'https://downloads.wordpress.org/plugin/contact-form-7.5.5.4.zip',
-        'required'           => true,
+        [
+            'name'		=> 'Contact Form 7', // http://wordpress.org/plugins/contact-form-7/
+            'slug'		=> 'contact-form-7',
+            'required'  => true,
+        ]
+
     ];
-    $config = [
-        'has_notices'  => true,
-        'dismiss_msg'  => 'Plugin for the work of the contact form of this theme',
-        'is_automatic' => true,
-    ];
-
-
-    tgmpa( $plugins, [] );
-
+    tgmpa( $plugins );
 }
 add_action( 'tgmpa_register', 'task_theme_require_plugins' );
 

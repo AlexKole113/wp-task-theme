@@ -42,7 +42,8 @@ body {
     height: 100%;
     overflow-x: hidden;
 }
-.container {
+.container,
+.post {
     padding: var(--page-padding);
     margin: auto;
     width: var(--standard-container-width);

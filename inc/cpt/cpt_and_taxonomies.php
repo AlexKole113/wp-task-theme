@@ -47,7 +47,7 @@ add_action( 'rest_api_init', function(){
 } );
 function task_theme_get_all_testimonials_with_matafields( WP_REST_Request $request ){
     $response = [];
-    $testimonials = get_posts([ 'post_type' => 'testimonials']);
+    $testimonials = get_posts([ 'post_type' => 'testimonials', 'numberposts' => 0]);
     foreach ($testimonials as $testimonial ){
         $data = [
            'id'   => $testimonial->ID,

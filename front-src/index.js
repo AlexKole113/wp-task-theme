@@ -17,7 +17,7 @@ window.addEventListener('load', () => {
 
     // build Google Map
     googleMapCustomization({
-        // apiKey: 'AIzaSyBQPl1Ur6Vtw6vOSV-T2WzRjIsHUaMW10g' ,
+        // apiKey: '------' ,
         // containerCSSSelector: '#contact-map',
         // options: {
         //     zoom: 11,
