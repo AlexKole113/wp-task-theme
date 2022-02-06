@@ -12,7 +12,7 @@
 ?>
 
 
-    <footer class="footer">
+<footer class="footer">
         <section class="container">
             <div class="footer__group">
                 <div class="footer__about-area">
@@ -130,9 +130,7 @@
 
         </section>
     </footer>
-
-
 <?php wp_footer(); ?>
-
+</div>
 </body>
 </html>
