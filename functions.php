@@ -167,7 +167,29 @@ function task_theme_widgets_init() {
         )
     );
 }
-add_action( 'widgets_init', 'task_theme_widgets_init' );
+add_action( 'widgets_init', 'task_theme_require_plugins' );
+
+
+require_once dirname( __FILE__ ) . '/inc/class-tgm-plugin-activation.php';
+function task_theme_require_plugins() {
+
+    $plugins = [
+        'name'               => 'Contact Form 7',
+        'slug'               => 'contact-form-7',
+        'source'             => 'https://downloads.wordpress.org/plugin/contact-form-7.5.5.4.zip',
+        'required'           => true,
+    ];
+    $config = [
+        'has_notices'  => true,
+        'dismiss_msg'  => 'Plugin for the work of the contact form of this theme',
+        'is_automatic' => true,
+    ];
+
+
+    tgmpa( $plugins, [] );
+
+}
+add_action( 'tgmpa_register', 'task_theme_require_plugins' );
 
 /**
  * Enqueue scripts and styles.
@@ -253,4 +275,5 @@ require get_template_directory() . '/inc/cpt/cpt_and_taxonomies.php';
  * Other theme functionalities.
  */
 require get_template_directory() . '/inc/import/import.php';
+
 
