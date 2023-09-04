@@ -1,24 +1,35 @@
-# ignore everything in the root except the "wp-content" directory.
-!wp-content/
+.idea
+.DS_Store
+debug.log
+#---------------------------
+# Themes
+#---------------------------
+# Ignore all themes
+/themes/*
+# Except this one theme
+!/themes/japan-society
 
-# ignore everything in the "wp-content" directory, except:
-# "mu-plugins", "plugins", "themes" directory
-wp-content/*
-!wp-content/mu-plugins/
-!wp-content/plugins/
-!wp-content/themes/
+#---------------------------
+# Plugins
+# Check out WPE's Smart
+# Plugin Manager (SMP)
+#---------------------------
+# Ignore all plugins
+/plugins/*
+# Except this one plugin
+!/plugins/ai-admin
+!/plugins/ai-filter-contact-forms
 
-# ignore these plugins
-wp-content/plugins/hello.php
+#---------------------------
+# MU plugins: these are
+# managed by the platform.
+#---------------------------
+/mu-plugins/
 
-# ignore specific themes
-wp-content/themes/twenty*/
-
-# ignore node dependency directories
-node_modules/
-
-
-# ignore log files and databases
-*.log
-*.sql
-*.sqlite
+#---------------------------
+# Uploads directory
+#---------------------------
+/uploads/
+/cache/
+/wflogs/
+/node_modules/
