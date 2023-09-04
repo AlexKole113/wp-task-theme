@@ -1,0 +1,28 @@
+/* dev */
+@import "./common/styles/partials/mixins.css";
+
+/* common */
+@import "./common/styles/colors.css";
+@import "./common/styles/fonts.css";
+@import "./common/styles/global.css";
+@import "./common/styles/layout.css";
+
+/*  gsap test*/
+/* todo:delete  */
+@import "./common/gsap/styles/index.css";
+
+/* components */
+@import "./components/buttons/styles/index.css";
+@import "./components/header/styles/index.css";
+@import "./components/logo/styles/index.css";
+@import "./components/main-menu/styles/index.css";
+@import "./components/hero/styles/index.css";
+@import "./components/second-section/styles/index.css";
+@import "./components/contacts/styles/index.css";
+@import "./components/form/styles/index.css";
+@import "./components/footer/styles/index.css";
+@import "./components/counter/styles/index.css";
+@import "./components/testimonials/styles/index.css";
+@import "./components/modal-additional/styles/index.css";
+
+

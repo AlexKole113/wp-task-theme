@@ -30,14 +30,6 @@ debug.log
 # Uploads directory
 #---------------------------
 /uploads/
-
-#---------------------------
-# Upgrade files
-#---------------------------
-/upgrade/
-#---------------------------
-# Cache and other
-#---------------------------
 /cache/
 /wflogs/
 /node_modules/

@@ -1,0 +1,61 @@
+:root {
+    --content-size: 5vw;
+    --side-spacing: 1.5rem;
+    --standard-container-width: 100%;
+    --page-padding: .75rem;
+}
+@mixin md  {
+    :root {
+        --content-size: 2.08vw;
+        --standard-container-width: 720px;
+        --side-spacing: 2.5rem;
+        --page-padding: 0;
+    }
+}
+@mixin lg {
+    :root {
+        --content-size: 18px;
+        --standard-container-width: 960px;
+    }
+}
+@mixin xl {
+    :root {
+        --standard-container-width: 1240px;
+    }
+}
+@mixin xxl {
+    :root {
+        --standard-container-width: 1410px;
+    }
+}
+
+html {
+    height: 100%;
+    font-size: var(--content-size);
+    overflow-x: hidden;
+}
+body {
+    min-height: 100vh;
+    position: relative;
+    font-family: var(--primary-font);
+    width: 100vw;
+    height: 100%;
+    overflow-x: hidden;
+}
+.container,
+.post {
+    padding: var(--page-padding);
+    margin: auto;
+    width: var(--standard-container-width);
+}
+.wp-block {
+    max-width: 100%;
+}
+.site {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+}
+.content-start {
+    padding-top: 2rem;
+}
